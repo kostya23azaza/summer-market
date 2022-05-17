@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>Summer Market</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</head>
+<body>
+<h2>Add operation</h2>
+<form method="post" th:action="@{/create_new_user}">
+    <!--- Get [http://localhost:8189] /add?a=10&b=10  --->
+    <input type="number" name="id">
+    <input type="text" name="name">
+    <input type="number" name="age">
+    <button class="btn btn-primary" type="submit">CREATE</button>
+</form>
+</body>
+</html>

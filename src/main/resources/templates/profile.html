@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+</head>
+<body>
+<div class="container">
+    <h1>Profile</h1>
+    <p></p>
+    <h2 th:text="${'User id: ' + user.id}"></h2>
+    <h2 th:text="${'User name: ' + user.name}"></h2>
+    <h2 th:text="${'User age: ' + user.age}"></h2>
+    <p></p>
+    <h2 th:text="${user.sayHello()}"></h2>
+</div>
+</body>
+</html>
