@@ -1,6 +1,7 @@
 package summer.market.services;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import summer.market.exceptions.CategoryNotFoundException;
 import summer.market.model.Category;
@@ -11,6 +12,7 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class CategoryService {
     private final CategoryRepository categoryRepository;
 
@@ -25,5 +27,6 @@ public class CategoryService {
 
     public void deleteCategoryById(Long id) {
         categoryRepository.deleteById(id);
+        log.debug("Category with id '{}' was deleted from the table category", id);
     }
 }
