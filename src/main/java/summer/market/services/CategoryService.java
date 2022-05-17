@@ -23,7 +23,7 @@ public class CategoryService {
         return categoryRepository.findById(id).orElseThrow(CategoryNotFoundException::new);
     }
 
-    public void deleteAllCategories(List<Category> categoryList) {
-        categoryRepository.deleteAll();
+    public void deleteCategoryById(Long id) {
+        categoryRepository.deleteById(id);
     }
 }
