@@ -7,11 +7,11 @@ import static org.mockito.Mockito.when;
 
 import java.util.ArrayList;
 
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.mockito.junit.jupiter.MockitoExtension;
 import summer.market.exceptions.CategoryNotFoundException;
 import summer.market.model.Category;
 import summer.market.repositories.CategoryRepository;
@@ -19,7 +19,7 @@ import summer.market.services.CategoryService;
 
 
 
-@SpringBootTest
+@ExtendWith(MockitoExtension.class)
 public class CategoryServiceTest {
 
   @Mock
@@ -40,10 +40,6 @@ public class CategoryServiceTest {
       .build();
   }
 
-  @AfterAll
-  public void clear() {
-
-  }
 
   @Test
   public void findCategoryById() {
