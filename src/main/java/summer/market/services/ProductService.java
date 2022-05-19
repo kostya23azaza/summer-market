@@ -3,6 +3,7 @@ package summer.market.services;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import summer.market.exceptions.ProductNotFoundException;
 import summer.market.model.Product;
 import summer.market.repositories.ProductRepository;
 
@@ -19,7 +20,7 @@ public class ProductService {
     }
 
     public Product findById(Long id) {
-        return productRepository.findById(id).get();
+        return productRepository.findById(id).orElseThrow(ProductNotFoundException::new);
     }
 
     public void saveNewProduct(String title, int price) {
