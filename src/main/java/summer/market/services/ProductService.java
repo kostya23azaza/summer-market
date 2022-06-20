@@ -22,6 +22,7 @@ public class ProductService {
     public Product findById(Long id) {
         return productRepository.findById(id).orElseThrow(ProductNotFoundException::new);
         // Проверяем гит
+        // опять проверяем
     }
 
     public void saveNewProduct(String title, int price) {
